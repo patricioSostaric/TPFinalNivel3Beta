@@ -6,7 +6,7 @@
     <asp:GridView ID="DGVArticulos" runat="server"  CssClass="table table-striped "  AutoGenerateColumns="false"
           OnSelectedIndexChanged="DGVArticulos_SelectedIndexChanged"
          OnPageIndexChanging="DGVArticulos_PageIndexChanging"
-         AllowPaging="true" PageSize="5" DataKeyNames="Id" >
+         AllowPaging="true" PageSize="5" DataKeyNames="id" >
         <Columns>
             <asp:BoundField  HeaderText="código" DataField="codigo"/>
              <asp:BoundField HeaderText="Nombre" DataField="Nombre" />

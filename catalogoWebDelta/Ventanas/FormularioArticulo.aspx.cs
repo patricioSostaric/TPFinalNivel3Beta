@@ -25,16 +25,16 @@ namespace Ventanas
                     List<Marca> lista = negocio.listar();
 
                     ddlMarca.DataSource = lista;
-                    ddlMarca.DataValueField = "Id";
-                    ddlMarca.DataTextField = "Descripcion";
+                    ddlMarca.DataValueField = "Id1";
+                    ddlMarca.DataTextField = "Descripcion1"; 
                     ddlMarca.DataBind();
 
                     CategoriaNegocio negocio2 = new CategoriaNegocio();
                     List<Categoria> lista2 = negocio2.listar();
 
-                    ddlCategoria.DataSource = lista;
-                    ddlCategoria.DataValueField = "Id";
-                    ddlCategoria.DataTextField = "Descripcion";
+                    ddlCategoria.DataSource = lista2;
+                    ddlCategoria.DataValueField = "Id1";
+                    ddlCategoria.DataTextField = "Descripcion1";
                     ddlCategoria.DataBind();
                 }
                 //configuración si estamos modificando.
@@ -59,7 +59,7 @@ namespace Ventanas
                     ddlMarca.SelectedValue = seleccionado.Marca.Id1.ToString();
                     txtImagenUrl_TextChanged(sender, e);
 
-                    //configurar acciones
+                    
 
                 }
 
@@ -127,7 +127,7 @@ namespace Ventanas
                 {
                     ArticuloNegocio negocio = new ArticuloNegocio();
                     negocio.eliminar(int.Parse(txtId.Text));
-                    Response.Redirect("Tabla.aspx");
+                    Response.Redirect("ArticuloLista.aspx");
                 }
             }
             catch (Exception ex)
